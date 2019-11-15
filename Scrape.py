@@ -19,25 +19,27 @@ class Lyrics():
                 lyrics += link.text
             print(lyrics)
 
-print("1. Get a song")
-print("2. Exit")
+continueProg = True
 
-print("Enter an option: ")
-option = int(input())
+while continueProg:
+        print("1. Get a song")
+        print("2. Exit")
 
-if option == 1:
-        print("Please enter the name of the song, and the artist, followed by enter: ")
-        details = " genius lyrics" + input()
-        scrape = Lyrics(details)
-        print("Lyrics: ")
-        print("")
-        scrape.getLyrics()
+        print("Enter an option: ")
+        option = int(input())
 
-elif option == 2:
-        print("Later")
-        exit()
+        if option == 1:
+                print("Please enter the name of the song, and the artist, followed by enter: ")
+                details = " genius lyrics" + input()
+                scrape = Lyrics(details)
+                print("Lyrics: ")
+                print("")
+                scrape.getLyrics()
+                print("Press enter to continue....")
+                input()
 
-
-
-
+        elif option == 2:
+                print("Later")
+                continueProg = False
+                exit()
 
